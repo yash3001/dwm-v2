@@ -54,9 +54,9 @@ static const Rule rules[] = {
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,      1,           0, 			 -1 },
-	{ NULL,		  "spfm",		NULL,		SPTAG(1),		1,      0,           -1,			 -1 },
-	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	{ NULL,	 "spterm",	   NULL,	SPTAG(0),		  1,          1,           0, 		 -1 },
+	{ NULL,	   "spfm",	   NULL,	SPTAG(1),		  1,          0,          -1,		 -1 },
+	{ NULL,      NULL,  "Event Tester",    0,         0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -160,7 +160,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },            // Disable gaps
 
     /* Scratchpad */
-	{ MODKEY|Mod1Mask,            	XK_s,  	   togglescratch,  {.ui = 0 } },            // Toggle scratchpad
+	{ MODKEY|Mod1Mask,            	XK_s,  	   togglescratch,  {.ui = 0 } },            // Toggle terminal scratchpad
+	{ MODKEY|Mod1Mask,            	XK_f,  	   togglescratch,  {.ui = 1 } },            // Toggle ranger scratchpad
 
     /* Tags */
 	TAGKEYS(                        XK_1,                      0)                       //------
