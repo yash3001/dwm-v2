@@ -148,8 +148,10 @@ static Key keys[] = {
 
     /* Window Actions */
 	{ MODKEY,                       XK_q,      killclient,     {0} },                   // Kill the focused client
-	{ MODKEY|ShiftMask,             XK_Right,      movestack,      {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Left,      movestack,      {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Right,  movestack,      {.i = +1 } },            // Move the focused client to the right
+	{ MODKEY|ShiftMask,             XK_Left,   movestack,      {.i = -1 } },            // Move the focused client to the left
+	{ MODKEY|ShiftMask,             XK_Down,   movestack,      {.i = +1 } },            // Move the focused client to the right
+	{ MODKEY|ShiftMask,             XK_Up,     movestack,      {.i = -1 } },            // Move the focused client to the left
 
 
     /* Manipulating Gaps */
