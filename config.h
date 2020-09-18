@@ -94,6 +94,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]  = { "dmenu_run", "-h", "40", "-c", "-l", "10", NULL };
+static const char *clipmenucmd[]  = { "/home/yash/.config/dwm/automate_scripts/clipmenu.sh", NULL };
 static const char *termcmd[]   = { "terminator", NULL };
 static const char *stcmd[]     = { "st", NULL };
 static const char *firefox[]   = { "firefox", NULL };
@@ -122,6 +123,7 @@ static Key keys[] = {
     
     /* My applications */
 	{ MODKEY|Mod1Mask,              XK_x,      spawn,          {.v = dmenucmd } },      // Dmenu_run
+	{ MODKEY|Mod1Mask,              XK_c,      spawn,          {.v = clipmenucmd } },   // Clipmenu
 	{ MODKEY|Mod1Mask,              XK_b,      spawn,          {.v = firefox } },       // firefox
 	{ MODKEY,                       XK_Return, spawn,          {.v = stcmd   } },       // st terminal
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },       // terminator
