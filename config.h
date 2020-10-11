@@ -113,6 +113,7 @@ static const char *cmuspreviouscmd[] = { "/home/yash/.config/dwm/automate_script
 static const char *poweroffcmd[]   = { "/home/yash/.config/dwm/automate_scripts/shutdown.sh", NULL };
 
 static const char *screenshotcmd[] = { "/home/yash/.config/dwm/automate_scripts/screenshot.sh", NULL };
+static const char *rectshotcmd[] = { "/home/yash/.config/dwm/automate_scripts/rectangular_screenshot.sh", NULL };
 
 static const char *screenlockcmd[] = { "i3lock-fancy", NULL };
 
@@ -212,6 +213,7 @@ static Key keys[] = {
 
     /* Screenshot */
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = screenshotcmd } }, // Take screenshot
+	{ MODKEY|ShiftMask|ControlMask, XK_p,      spawn,            {.v = rectshotcmd } }, // Take rectangular selection screenshot
 
     /* Multi monitor */
 //  { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },            // \
